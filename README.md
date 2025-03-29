@@ -12,7 +12,8 @@ const stateAsync = useAsyncState(state)
 
 // ...some async operation
 async getLatestData() {
-    // latest rendered state value
+     const data = await fetchData()
+    // rendered happened! get latest rendered state value
     const latestValue = await stateAsync()
 }
 ```
