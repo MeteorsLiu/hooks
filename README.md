@@ -7,15 +7,18 @@ Make a state asynchronously
 ### Howto
 
 ```typescript
-const [state] = useState("")
+const [state, setState] = useState("")
 const stateAsync = useAsyncState(state)
 
 // ...some async operation
 async getLatestData() {
+     // slow operation
      const data = await fetchData()
     // rendered happened! get latest rendered state value
     const latestValue = await stateAsync()
 }
+
+setState("aaa")
 ```
 
 ## useLatest
