@@ -6,7 +6,7 @@ Make a state asynchronously
 
 ### Howto
 
-```
+```typescript
 const [state] = useState("")
 const stateAsync = useAsyncState(state)
 
@@ -24,7 +24,7 @@ Make a value keeping latest
 
 ### Howto
 
-```
+```typescript
 const [state] = useState("")
 const stateLatest = useLatest(state)
 
@@ -44,7 +44,7 @@ Indicate current component is mounted or not.
 
 ### Howto
 
-```
+```typescript
 const isMounted = useMounted()
 
 if (isMounted) {
@@ -60,7 +60,7 @@ Skip first trigger of useEffect
 
 ### Howto
 
-```
+```typescript
 const [state, setState] = useState("init")
 
 setState("aaa")
@@ -88,7 +88,7 @@ use [requestAnimationFrame](https://developer.mozilla.org/zh-CN/docs/Web/API/Win
 
 ### Howto
 
-```
+```typescript
 const [windowSize, setWindowSize] = useState(0)
 
 const [setWindowSizeRAF] = useRafCallback((currentWindowSize: number) => {
@@ -115,7 +115,7 @@ Check user is scrolled to bottom
 
 ### Howto
 
-```
+```typescript
 const isBottom = useScreenBottom()
 
 if (isBottom) {
@@ -123,12 +123,3 @@ if (isBottom) {
 }
 ```
 
-### What If I want to export a component? 
-
-You can do that too, following same pattern as you'd with hooks.
-
-Bear in mind you'd propably need .tsx file and not .ts.
-
-### Share with the world
-
-Share your work and learnings with the world! :)
