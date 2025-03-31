@@ -1,6 +1,6 @@
 # Meteor React Hooks!
 
-## useAsyncState
+## useAsyncState[WIP]
 
 Make a state asynchronously
 
