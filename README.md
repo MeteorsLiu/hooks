@@ -11,7 +11,7 @@ const [state, setState] = useState("")
 const stateAsync = useAsyncState(state)
 
 // ...some async operation
-async getLatestData() {
+async function getLatestData() {
      // slow operation
      const data = await fetchData()
     // rendered happened! get latest rendered state value
@@ -106,7 +106,7 @@ useEffect(() => {
         setWindowSizeRAF(window.innerHeight)
     }
     window.addEventListener('resize', onWindowResize)
-    return () => window.removeEventListener('resize;, onWindowResize)
+    return () => window.removeEventListener('resize', onWindowResize)
 }, [])
 ```
 
